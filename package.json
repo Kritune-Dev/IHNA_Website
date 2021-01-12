@@ -1,0 +1,29 @@
+{
+  "name": "ihna_website",
+  "version": "1.0.0",
+  "description": "The website of all my project",
+  "main": "src/server.js",
+  "scripts": {
+    "lint:check": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "serve": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "site",
+    "IHNA"
+  ],
+  "author": "Kritune",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dot-env": "0.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "nodemon": "^2.0.7"
+  }
+}
