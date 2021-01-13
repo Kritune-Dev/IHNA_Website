@@ -74,7 +74,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.SSH_PASSWORD }}
           script: |
-            cd ~/IHNA/IHNA_MessengerService/
+            cd ~/IHNA/IHNA_Website/
             git pull
             npm install
-            NODE_ENV=production pm2 restart Messenger
+            pm2 restart Website
