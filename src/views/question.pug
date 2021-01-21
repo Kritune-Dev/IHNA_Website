@@ -1,0 +1,16 @@
+extends layout
+
+block layout-content
+  div.View.OsteoView
+    h1.Banner Questions pour le région membre inférieur
+    div.Message
+      div.Title
+        h3 Tests orthopédiques
+        p #{questions.test}
+        h3 HVBA 
+        p #{questions.hvba}
+        h3 OMG
+        p #{questions.omg}
+    div.NavButtons
+      a(href="/exam")
+        div.NavButton Changer les questions

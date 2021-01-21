@@ -144,3 +144,8 @@ a {
     background: url("welcome.jpg") left bottom;
     background-size: cover;
   }
+
+.OsteoView {
+    background: url("osteo.jpg") left bottom;
+    background-size: cover;
+  }

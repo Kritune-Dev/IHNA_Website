@@ -4,6 +4,7 @@
 const express = require('express')
 const path = require('path')
 const call_service = require('./call_service')
+const exam = require('./questions')
 
 /**
  * App Variables
@@ -27,6 +28,10 @@ app.get('/', async (req, res) => {
 })
 app.get('/confidentialite', (req, res) => {
   res.render('confidentialite', { title: 'Confidentialité' })
+})
+app.get('/exam', (req, res) => {
+  var questions = exam.getQuestions()
+  res.render('question', { title: 'Examen RAI', questions})
 })
 app.get('*', function(req, res){
   res.redirect('/')
