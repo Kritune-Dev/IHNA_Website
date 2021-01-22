@@ -30,8 +30,14 @@ app.get('/confidentialite', (req, res) => {
   res.render('confidentialite', { title: 'Confidentialité' })
 })
 app.get('/exam', (req, res) => {
-  var questions = exam.getQuestions()
-  res.render('question', { title: 'Examen RAI', questions})
+  res.redirect('/pratique/p3/rai')
+})
+app.get('/pratique/:promo/:id', (req, res) => {
+  var zone = req.params.id.toUpperCase()
+  var promo = req.params.promo.toUpperCase()
+  var questions = exam.getQuestions(req.params.promo, req.params.id)
+  var link = `/pratique/${req.params.promo}/${req.params.id}`
+  res.render('question', { title: `${promo} | Pratique ${zone}`, questions, link})
 })
 app.get('*', function(req, res){
   res.redirect('/')

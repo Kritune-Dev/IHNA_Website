@@ -2,15 +2,24 @@ extends layout
 
 block layout-content
   div.View.OsteoView
-    h1.Banner Questions pour le région membre inférieur
+    h1.Banner #{questions.description}
     div.Message
       div.Title
-        h3 Tests orthopédiques
-        p #{questions.test}
-        h3 HVBA 
-        p #{questions.hvba}
-        h3 OMG
-        p #{questions.omg}
+        if questions.test
+          h3 Tests orthopédiques
+          p #{questions.test}  
+        if questions.hvba
+          h3 HVBA
+          p #{questions.hvba}
+        if questions.omg
+          h3 OMG
+          p #{questions.omg}             
+        if questions.omtap
+          h3 OMTAP
+          p #{questions.omtap}
+        if questions.omc
+          h3 OMC
+          p #{questions.omc}
     div.NavButtons
-      a(href="/exam")
+      a(href=link)
         div.NavButton Changer les questions
