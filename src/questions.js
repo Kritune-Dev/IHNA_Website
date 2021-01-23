@@ -53,3 +53,24 @@ function getQuestionsByRegion (questions, region){
     return questions.rai
   }
 }
+
+exports.regionIsUndefined = (promo, region) => {
+  var zone
+  switch (promo) {
+  case 'p3':
+    zone = p3.region
+    break
+  case 'd1':
+    zone = d1.region
+    break
+  }
+
+  var isUndefined = true
+  for (let index = 0; index < zone.length; index++) {
+    if (zone[index] === region) 
+    {
+      isUndefined = false
+    }
+  }
+  return isUndefined
+}

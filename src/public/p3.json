@@ -1,4 +1,7 @@
 {
+"region" : [
+  "rai"
+],
 "rai" : {
   "info": {
     "description": "P3 : Questions pour le région appendiculaire inférieur"

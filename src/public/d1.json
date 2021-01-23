@@ -1,4 +1,10 @@
 {
+  "region" : [
+    "rpla",
+    "rcc",
+    "rai",
+    "rts"
+  ],
   "rpla": {
     "info": {
       "description": "D1 : Questions pour le région lombo-pelvi-admoninal"

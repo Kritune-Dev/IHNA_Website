@@ -32,15 +32,23 @@ app.get('/confidentialite', (req, res) => {
 app.get('/exam', (req, res) => {
   res.redirect('/pratique/p3/rai')
 })
+app.get('/pratique', (req, res) => {
+  res.render('pratique', { title: 'Pratique' })
+})
 app.get('/pratique/:promo/:id', (req, res) => {
-  var zone = req.params.id.toUpperCase()
-  var promo = req.params.promo.toUpperCase()
-  var questions = exam.getQuestions(req.params.promo, req.params.id)
-  var link = `/pratique/${req.params.promo}/${req.params.id}`
-  res.render('question', { title: `${promo} | Pratique ${zone}`, questions, link})
+  var zone = req.params.id
+  var promo = req.params.promo
+
+  if(promo !== 'p3' && promo !== 'd1') { res.redirect('/pratique') }
+  if(exam.regionIsUndefined(promo, zone)) { res.redirect('/pratique') }  
+
+  var questions = exam.getQuestions(promo, zone)  
+
+  var link = `/pratique/${promo}/${zone}`
+  res.render('question', { title: `${promo.toUpperCase()} | Pratique ${zone.toUpperCase()}`, questions, link})
 })
 app.get('*', function(req, res){
-  res.redirect('/')
+  res.redirect('/pratique')
 })
 
 /**

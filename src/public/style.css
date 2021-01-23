@@ -99,6 +99,7 @@ a {
   padding: 30px;
   border-bottom: var(--ui-shadow-border);
   box-shadow: var(--ui-shadow);
+  margin: 30px;
 }
 
 .Message > .Title {
@@ -126,6 +127,8 @@ a {
 
   height: 55px;
   width: 200px;
+  padding: 35px;
+  margin: 10px;
 
   background: #fa4141;
 
@@ -148,4 +151,13 @@ a {
 .OsteoView {
     background: url("osteo.jpg") left bottom;
     background-size: cover;
+  }
+
+.CenterPage {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    margin-left: auto;
+    margin-right: auto;
   }
