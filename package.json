@@ -1,6 +1,6 @@
 {
   "name": "ihna_website",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "The website of all my project",
   "main": "src/server.js",
   "scripts": {
