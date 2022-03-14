@@ -10,7 +10,7 @@ const exam = require('./questions')
  * App Variables
  */
 const app = express()
-const port = require('../../IHNA_Utils/ihna_port').portWebsite
+const port = 5000
 
 /**
  *  App Configuration
